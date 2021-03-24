@@ -10,10 +10,10 @@ Instructions
 npm install
 nodemon Server/server.js
 ```
-- Open `index.html`.
+- Open `index.html` in the browser.
   - This triggers a `console.log` on the client side.
-- Open `index2.html`
-  - Now you should see inside `index2.html` logs from both the Client and server.
+- Open `index2.html` in the browser.
+  - Now you should on the `index2.html` webpage logs from both the Client and server.
 
 ## Credit
 
