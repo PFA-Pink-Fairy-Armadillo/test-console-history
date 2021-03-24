@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Our MVP -> logging client</h1>
+  <div id="display">
+
+  </div>
+</body>
+  <script>
+    fetch('http://localhost:3000/logs')
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(`res`, res);
+        // const { history } = res;
+        // console.log('history: ', history);
+        const display = document.getElementById('display')
+        // let displayString = '';
+        // for
+        let displayString = '';
+        displayString += 'log from client: '
+        displayString += res.clientHistory;
+        displayString += '<br/>';
+        displayString += 'log from server: '
+        displayString += res.serverHistory[0].arguments[0];
+        console.log(`displayString`, displayString);
+        display.innerHTML = displayString;
+      })
+  </script>
+</html>

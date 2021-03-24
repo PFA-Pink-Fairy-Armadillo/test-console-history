@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test git history</title>
+</head>
+<body>
+  <h1>Any Projects Frontend</h1>
+  <div>Hello World</div>
+  
+</body>
+  <script src="https://cdn.jsdelivr.net/gh/lesander/console.history@v1.5.1/console-history.min.js"></script>
+  <script>
+    console.log('log from the client');
+  </script>
+  <script>
+    fetch('http://localhost:3000/get')
+
+    const response = fetch("http://localhost:3000/console", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ history: console.history }),
+
+    })
+  </script>
+</html>
